@@ -1,0 +1,1 @@
+web: gunicorn luvit_app.wsgi --log-file -
