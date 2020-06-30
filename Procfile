@@ -1,1 +1,1 @@
-web: gunicorn luvit_app.wsgi --log-file -
+web: gunicorn luvi_app.wsgi --log-file -
