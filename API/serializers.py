@@ -23,5 +23,4 @@ class ProductBulkSerializer(serializers.Serializer):
 
     def create(self, validated_data):
         products = [Product(**item) for item in validated_data["products"]]
-        print(products)
         return Product.objects.bulk_create(products)

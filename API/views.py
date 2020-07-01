@@ -33,6 +33,7 @@ class ProductBulkCreate(
     def post(self, request, *args, **kwargs):
         ser = ProductBulkSerializer(data=request.data)
         if ser.is_valid():
+            ser.create(request.data)
             return Response({"status": "OK"}, status=status.HTTP_201_CREATED)
         ret_dict = {
             "status": "ERROR",
